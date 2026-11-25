@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hisoblagich</title>
+
+    <style>
+        body {
+            background: #f1f3f5;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 600px;
+            padding: 40px;
+            background: white;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 5px 20px #aaa;
+        }
+
+        button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: none;
+            background: #00d9c0;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00a995;
+        }
+
+        #number {
+            font-size: 70px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <button id="minus">−</button>
+
+        <span id="number">0</span>
+
+        <button id="plus">+</button>
+
+    </div>
+
+    <script>
+
+        let son = 0;
+
+        let number = document.getElementById("number");
+        let plus = document.getElementById("plus");
+        let minus = document.getElementById("minus");
+
+        plus.onclick = function() {
+            son++;
+            number.innerHTML = son;
+        };
+
+        minus.onclick = function() {
+            son--;
+            number.innerHTML = son;
+        };
+
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
